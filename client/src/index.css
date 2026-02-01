@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@plugin "daisyui";
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af transparent;
+}
+/* global.css */
+::-webkit-scrollbar {
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: marquee 12s linear infinite;
+  display: flex;
+}
+
+/* Optional: pause on hover */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
